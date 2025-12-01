@@ -1,0 +1,1293 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20252.25.1003.1601                               -->
+<workbook original-version='18.1' source-build='2025.2.4 (20252.25.1003.1601)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='eda_books' inline='true' name='federated.0konhy60a2kkd416lcf540q1fdxu' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='eda_books' name='textscan.10uzkss0y4jo1z1gfhry51d7kscd'>
+            <connection class='textscan' directory='C:/Users/gabyc/Downloads' filename='eda_books.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.10uzkss0y4jo1z1gfhry51d7kscd' name='eda_books.csv' table='[eda_books#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator='&#9;'>
+            <column datatype='string' name='title' ordinal='0' />
+            <column datatype='string' name='categories' ordinal='1' />
+            <column datatype='string' name='authors' ordinal='2' />
+            <column datatype='string' name='publishedDate' ordinal='3' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[eda_books.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;\\t&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>title</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[title]</local-name>
+            <parent-name>[eda_books.csv]</parent-name>
+            <remote-alias>title</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[eda_books.csv_B46222B121BF469FABC9626C59AFBFFD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>categories</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[categories]</local-name>
+            <parent-name>[eda_books.csv]</parent-name>
+            <remote-alias>categories</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[eda_books.csv_B46222B121BF469FABC9626C59AFBFFD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>authors</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[authors]</local-name>
+            <parent-name>[eda_books.csv]</parent-name>
+            <remote-alias>authors</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[eda_books.csv_B46222B121BF469FABC9626C59AFBFFD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>publishedDate</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[publishedDate]</local-name>
+            <parent-name>[eda_books.csv]</parent-name>
+            <remote-alias>publishedDate</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[eda_books.csv_B46222B121BF469FABC9626C59AFBFFD]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Null Title' datatype='integer' name='[Calculation_394909404317298690]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='ZN(IIF(ISNULL([title]), 1, 0))' />
+      </column>
+      <column caption='&quot;Published Date&quot; Format' datatype='string' name='[Calculation_394909404404633607]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF REGEXP_MATCH([publishedDate], &apos;^\d{4}$&apos;) THEN &quot;Sólo el año (YYYY)&quot;&#13;&#10;ELSEIF REGEXP_MATCH([publishedDate], &apos;^\d{4}-\d{2}-\d{2}$&apos;) THEN &quot;Fecha completa (YYYY-MM-DD)&quot;&#13;&#10;ELSEIF REGEXP_MATCH([publishedDate], &apos;^\d{4}-\d{2}$&apos;) THEN &quot;Año-Mes (YYYY-MM)&quot;&#13;&#10;ELSEIF REGEXP_MATCH([publishedDate], &apos;^\d{4}[\*\?]$&apos;) THEN &quot;Año con símbolo (YYYY? or YYYY*)&quot;&#13;&#10;ELSEIF REGEXP_MATCH([publishedDate], &apos;^\d{3}\?$&apos;) THEN &quot;Año aproximado (YYY?)&quot;&#13;&#10;ELSEIF REGEXP_MATCH([publishedDate], &apos;^\d{2}\?\?$&apos;) THEN &quot;Década aproximada (YY??)&quot;&#13;&#10;ELSE &quot;Otro / formato erróneo&quot;&#13;&#10;END' />
+      </column>
+      <column caption='Null Published Date' datatype='integer' name='[Null Authors (copy)_394909404319170565]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='ZN(IIF(ISNULL([publishedDate]), 1, 0))' />
+      </column>
+      <column caption='Null Authors' datatype='integer' name='[Null Categories (copy)_394909404318572548]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='ZN(IIF(ISNULL([authors]), 1, 0))' />
+      </column>
+      <column caption='Null Categories' datatype='integer' name='[Nulos Title (copy)_394909404317802499]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='ZN(IIF(ISNULL([categories]), 1, 0))' />
+      </column>
+      <column caption='eda_books.csv' datatype='table' name='[__tableau_internal_object_id__].[eda_books.csv_B46222B121BF469FABC9626C59AFBFFD]' role='measure' type='quantitative' />
+      <column caption='Authors' datatype='string' name='[authors]' role='dimension' type='nominal' />
+      <column caption='Categories' datatype='string' name='[categories]' role='dimension' type='nominal' />
+      <column caption='Published Date' datatype='string' name='[publishedDate]' role='dimension' type='nominal' />
+      <column caption='Title' datatype='string' name='[title]' role='dimension' type='nominal' />
+      <column-instance column='[categories]' derivation='None' name='[none:categories:nk]' pivot='key' type='nominal' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/gabyc/AppData/Local/Temp/TableauTemp/#TableauTemp_0z1d57e0dtrpmq1e22gv61bbscit.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='12/01/2025 02:32:05 AM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>title</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[title]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>title</remote-alias>
+              <ordinal>0</ordinal>
+              <family>eda_books.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>212404</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[eda_books.csv_B46222B121BF469FABC9626C59AFBFFD]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>categories</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[categories]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>categories</remote-alias>
+              <ordinal>1</ordinal>
+              <family>eda_books.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3842</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[eda_books.csv_B46222B121BF469FABC9626C59AFBFFD]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>authors</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[authors]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>authors</remote-alias>
+              <ordinal>2</ordinal>
+              <family>eda_books.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>84354</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[eda_books.csv_B46222B121BF469FABC9626C59AFBFFD]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>publishedDate</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[publishedDate]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>publishedDate</remote-alias>
+              <ordinal>3</ordinal>
+              <family>eda_books.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>11008</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[eda_books.csv_B46222B121BF469FABC9626C59AFBFFD]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:categories:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>%null%</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[&apos;Biography &amp; Autobiography&apos;]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[&apos;Language Arts &amp; Disciplines&apos;]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[&apos;*AW01 - India - Indien&apos;]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[&apos;History&apos;]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[&apos;Music&apos;]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[&apos;\&quot;Fram\&quot; Expedition&apos;]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[&apos;Fiction&apos;]&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;[&apos;1858&apos;]&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;[&apos;Sports &amp; Recreation&apos;]&quot;</bucket>
+            </map>
+            <map to='#9c755f'>
+              <bucket>&quot;[&apos;15th century&apos;]&quot;</bucket>
+            </map>
+            <map to='#9c755f'>
+              <bucket>&quot;[&apos;Science&apos;]&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;[&apos;4e Arrondissement (Paris, France)&apos;]&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;[&apos;Body, Mind &amp; Spirit&apos;]&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;[&apos;Literary Criticism&apos;]&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;[&apos;11030 - fiction in English - p1030 - Greene, Graham - 60030 - biographies&apos;]&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;[&apos;4-H clubs&apos;]&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;[&apos;Juvenile Nonfiction&apos;]&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;[&apos;Cooking&apos;]&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;[&apos;1659-1695&apos;]&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;[&apos;1900-1950&apos;]&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;[&apos;Social Science&apos;]&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;[&apos;2010 : A space odyssey (Motion picture)&apos;]&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;[&apos;44 Scotland Street (Edinburgh, Scotland : Imaginary place)&apos;]&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;[&apos;A Grow and Learn Library&apos;]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[&apos;\&quot;Billed as \&quot;a musical about an old operetta,\&quot; Little Mary Sunshine gently spoofs such old-time favorites as Rose Marie and Naughty Marietta, but has a personality all its own. The plot is a little bit of everything: Colorado Rangers led by stalwart Captain Jim&apos;]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[&apos;1800-1899&apos;]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[&apos;Computers&apos;]&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;[&apos;1. Short Stories-Science Fiction&apos;]&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;[&apos;Juvenile Fiction&apos;]&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;[&apos;Education&apos;]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[&apos;.conometrics&apos;]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[&apos;Art&apos;]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[&apos;Business &amp; Economics&apos;]&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;[&apos;360-degree feedback (Rating of employees)&apos;]&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;[&apos;1805-1892&apos;]&quot;</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>&quot;[&apos;11030 - fiction in English - p1030 - New Zealand writers - 1907- - 60030 - texts&apos;]&quot;</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>&quot;[&apos;Religion&apos;]&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;[&apos;Family &amp; Relationships&apos;]&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;[&apos;Medical&apos;]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Mexico&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='eda_books.csv' id='eda_books.csv_B46222B121BF469FABC9626C59AFBFFD'>
+            <properties context=''>
+              <relation connection='textscan.10uzkss0y4jo1z1gfhry51d7kscd' name='eda_books.csv' table='[eda_books#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator='&#9;'>
+                  <column datatype='string' name='title' ordinal='0' />
+                  <column datatype='string' name='categories' ordinal='1' />
+                  <column datatype='string' name='authors' ordinal='2' />
+                  <column datatype='string' name='publishedDate' ordinal='3' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='All published date'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='eda_books' name='federated.0konhy60a2kkd416lcf540q1fdxu' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0konhy60a2kkd416lcf540q1fdxu'>
+            <column-instance column='[publishedDate]' derivation='None' name='[none:publishedDate:nk]' pivot='key' type='nominal' />
+            <column caption='Published Date' datatype='string' name='[publishedDate]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.0konhy60a2kkd416lcf540q1fdxu].[none:publishedDate:nk]</rows>
+        <cols />
+        <show-full-range>
+          <column>[federated.0konhy60a2kkd416lcf540q1fdxu].[Null Published Date (bin)]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{A62FF051-333B-4C86-95D5-F7B29A29E76E}' />
+    </worksheet>
+    <worksheet name='Bottom 10 categorías'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='eda_books' name='federated.0konhy60a2kkd416lcf540q1fdxu' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0konhy60a2kkd416lcf540q1fdxu'>
+            <column caption='Categories' datatype='string' name='[categories]' role='dimension' type='nominal' />
+            <column-instance column='[categories]' derivation='Count' name='[cnt:categories:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[categories]' derivation='None' name='[none:categories:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0konhy60a2kkd416lcf540q1fdxu].[none:categories:nk]'>
+            <groupfilter count='10' end='bottom' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='COUNT([categories])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:categories:nk]' user:ui-manual-selection='true' user:ui-manual-selection-all-when-empty='true' user:ui-manual-selection-is-empty='true' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <computed-sort column='[federated.0konhy60a2kkd416lcf540q1fdxu].[none:categories:nk]' direction='ASC' using='[federated.0konhy60a2kkd416lcf540q1fdxu].[cnt:categories:qk]' />
+          <slices>
+            <column>[federated.0konhy60a2kkd416lcf540q1fdxu].[none:categories:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='legend'>
+            <format attr='col-width' field='[federated.0konhy60a2kkd416lcf540q1fdxu].[none:categories:nk]' value='180' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <encodings>
+              <color column='[federated.0konhy60a2kkd416lcf540q1fdxu].[none:categories:nk]' />
+              <wedge-size column='[federated.0konhy60a2kkd416lcf540q1fdxu].[cnt:categories:qk]' />
+              <size column='[federated.0konhy60a2kkd416lcf540q1fdxu].[cnt:categories:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{9DAC71B0-CF7F-4FE7-BB39-4860EDF13D91}' />
+    </worksheet>
+    <worksheet name='Conteo Bottom categorías'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='eda_books' name='federated.0konhy60a2kkd416lcf540q1fdxu' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0konhy60a2kkd416lcf540q1fdxu'>
+            <column caption='Categories' datatype='string' name='[categories]' role='dimension' type='nominal' />
+            <column-instance column='[categories]' derivation='Count' name='[cnt:categories:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[categories]' derivation='None' name='[none:categories:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0konhy60a2kkd416lcf540q1fdxu].[none:categories:nk]'>
+            <groupfilter count='10' end='bottom' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='COUNT([categories])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:categories:nk]' user:ui-exclude='true' user:ui-manual-selection='true' user:ui-manual-selection-all-when-empty='true' user:ui-manual-selection-is-empty='true' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.0konhy60a2kkd416lcf540q1fdxu].[none:categories:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[&apos;A Grow and Learn Library&apos;]&quot;</bucket>
+              <bucket>&quot;[&apos;*AW01 - India - Indien&apos;]&quot;</bucket>
+              <bucket>&quot;[&apos;\&quot;Fram\&quot; Expedition&apos;]&quot;</bucket>
+              <bucket>&quot;[&apos;\&quot;Billed as \&quot;a musical about an old operetta,\&quot; Little Mary Sunshine gently spoofs such old-time favorites as Rose Marie and Naughty Marietta, but has a personality all its own. The plot is a little bit of everything: Colorado Rangers led by stalwart Captain Jim&apos;]&quot;</bucket>
+              <bucket>&quot;[&apos;.conometrics&apos;]&quot;</bucket>
+              <bucket>&quot;[&apos;11030 - fiction in English - p1030 - New Zealand writers - 1907- - 60030 - texts&apos;]&quot;</bucket>
+              <bucket>&quot;[&apos;11030 - fiction in English - p1030 - Greene, Graham - 60030 - biographies&apos;]&quot;</bucket>
+              <bucket>&quot;[&apos;2010 : A space odyssey (Motion picture)&apos;]&quot;</bucket>
+              <bucket>&quot;[&apos;1900-1950&apos;]&quot;</bucket>
+              <bucket>&quot;[&apos;1858&apos;]&quot;</bucket>
+              <bucket>&quot;[&apos;1805-1892&apos;]&quot;</bucket>
+              <bucket>&quot;[&apos;1800-1899&apos;]&quot;</bucket>
+              <bucket>&quot;[&apos;1659-1695&apos;]&quot;</bucket>
+              <bucket>&quot;[&apos;360-degree feedback (Rating of employees)&apos;]&quot;</bucket>
+              <bucket>&quot;[&apos;44 Scotland Street (Edinburgh, Scotland : Imaginary place)&apos;]&quot;</bucket>
+              <bucket>&quot;[&apos;15th century&apos;]&quot;</bucket>
+              <bucket>&quot;[&apos;4e Arrondissement (Paris, France)&apos;]&quot;</bucket>
+              <bucket>&quot;[&apos;4-H clubs&apos;]&quot;</bucket>
+              <bucket>&quot;[&apos;1. Short Stories-Science Fiction&apos;]&quot;</bucket>
+              <bucket>%null%</bucket>
+              <bucket>&quot;[&apos;Fiction&apos;]&quot;</bucket>
+              <bucket>&quot;[&apos;Religion&apos;]&quot;</bucket>
+              <bucket>&quot;[&apos;History&apos;]&quot;</bucket>
+              <bucket>&quot;[&apos;Juvenile Fiction&apos;]&quot;</bucket>
+              <bucket>&quot;[&apos;Biography &amp; Autobiography&apos;]&quot;</bucket>
+              <bucket>&quot;[&apos;Business &amp; Economics&apos;]&quot;</bucket>
+              <bucket>&quot;[&apos;Computers&apos;]&quot;</bucket>
+              <bucket>&quot;[&apos;Social Science&apos;]&quot;</bucket>
+              <bucket>&quot;[&apos;Juvenile Nonfiction&apos;]&quot;</bucket>
+              <bucket>&quot;[&apos;Science&apos;]&quot;</bucket>
+              <bucket>&quot;[&apos;Education&apos;]&quot;</bucket>
+              <bucket>&quot;[&apos;Cooking&apos;]&quot;</bucket>
+              <bucket>&quot;[&apos;Sports &amp; Recreation&apos;]&quot;</bucket>
+              <bucket>&quot;[&apos;Family &amp; Relationships&apos;]&quot;</bucket>
+              <bucket>&quot;[&apos;Literary Criticism&apos;]&quot;</bucket>
+              <bucket>&quot;[&apos;Music&apos;]&quot;</bucket>
+              <bucket>&quot;[&apos;Medical&apos;]&quot;</bucket>
+              <bucket>&quot;[&apos;Art&apos;]&quot;</bucket>
+              <bucket>&quot;[&apos;Body, Mind &amp; Spirit&apos;]&quot;</bucket>
+              <bucket>&quot;[&apos;Language Arts &amp; Disciplines&apos;]&quot;</bucket>
+              <bucket>%all%</bucket>
+            </dictionary>
+          </manual-sort>
+          <slices>
+            <column>[federated.0konhy60a2kkd416lcf540q1fdxu].[none:categories:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.0konhy60a2kkd416lcf540q1fdxu].[none:categories:nk]' value='364' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0konhy60a2kkd416lcf540q1fdxu].[cnt:categories:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0konhy60a2kkd416lcf540q1fdxu].[none:categories:nk]</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{D771368F-3609-49CB-8CCA-6ED3E929BF28}' />
+    </worksheet>
+    <worksheet name='Conteo Top categorías'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='eda_books' name='federated.0konhy60a2kkd416lcf540q1fdxu' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0konhy60a2kkd416lcf540q1fdxu'>
+            <column caption='Categories' datatype='string' name='[categories]' role='dimension' type='nominal' />
+            <column-instance column='[categories]' derivation='Count' name='[cnt:categories:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[categories]' derivation='None' name='[none:categories:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0konhy60a2kkd416lcf540q1fdxu].[none:categories:nk]'>
+            <groupfilter count='10' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='COUNT([categories])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:categories:nk]' user:ui-manual-selection='true' user:ui-manual-selection-all-when-empty='true' user:ui-manual-selection-is-empty='true' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.0konhy60a2kkd416lcf540q1fdxu].[none:categories:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[&apos;Fiction&apos;]&quot;</bucket>
+              <bucket>&quot;[&apos;Religion&apos;]&quot;</bucket>
+              <bucket>&quot;[&apos;History&apos;]&quot;</bucket>
+              <bucket>&quot;[&apos;Juvenile Fiction&apos;]&quot;</bucket>
+              <bucket>&quot;[&apos;Biography &amp; Autobiography&apos;]&quot;</bucket>
+              <bucket>&quot;[&apos;Business &amp; Economics&apos;]&quot;</bucket>
+              <bucket>&quot;[&apos;Computers&apos;]&quot;</bucket>
+              <bucket>&quot;[&apos;Social Science&apos;]&quot;</bucket>
+              <bucket>&quot;[&apos;Juvenile Nonfiction&apos;]&quot;</bucket>
+              <bucket>&quot;[&apos;Science&apos;]&quot;</bucket>
+              <bucket>&quot;[&apos;Education&apos;]&quot;</bucket>
+              <bucket>&quot;[&apos;Cooking&apos;]&quot;</bucket>
+              <bucket>&quot;[&apos;Sports &amp; Recreation&apos;]&quot;</bucket>
+              <bucket>&quot;[&apos;Family &amp; Relationships&apos;]&quot;</bucket>
+              <bucket>&quot;[&apos;Literary Criticism&apos;]&quot;</bucket>
+              <bucket>&quot;[&apos;Music&apos;]&quot;</bucket>
+              <bucket>&quot;[&apos;Medical&apos;]&quot;</bucket>
+              <bucket>&quot;[&apos;Art&apos;]&quot;</bucket>
+              <bucket>&quot;[&apos;Body, Mind &amp; Spirit&apos;]&quot;</bucket>
+              <bucket>&quot;[&apos;Language Arts &amp; Disciplines&apos;]&quot;</bucket>
+              <bucket>%all%</bucket>
+            </dictionary>
+          </manual-sort>
+          <slices>
+            <column>[federated.0konhy60a2kkd416lcf540q1fdxu].[none:categories:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.0konhy60a2kkd416lcf540q1fdxu].[none:categories:nk]' value='332' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0konhy60a2kkd416lcf540q1fdxu].[cnt:categories:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0konhy60a2kkd416lcf540q1fdxu].[none:categories:nk]</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{5DE02E97-F8D7-4395-A180-105F4FF953A3}' />
+    </worksheet>
+    <worksheet name='Formato de published date'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='eda_books' name='federated.0konhy60a2kkd416lcf540q1fdxu' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0konhy60a2kkd416lcf540q1fdxu'>
+            <column caption='&quot;Published Date&quot; Format' datatype='string' name='[Calculation_394909404404633607]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF REGEXP_MATCH([publishedDate], &apos;^\d{4}$&apos;) THEN &quot;Sólo el año (YYYY)&quot;&#13;&#10;ELSEIF REGEXP_MATCH([publishedDate], &apos;^\d{4}-\d{2}-\d{2}$&apos;) THEN &quot;Fecha completa (YYYY-MM-DD)&quot;&#13;&#10;ELSEIF REGEXP_MATCH([publishedDate], &apos;^\d{4}-\d{2}$&apos;) THEN &quot;Año-Mes (YYYY-MM)&quot;&#13;&#10;ELSEIF REGEXP_MATCH([publishedDate], &apos;^\d{4}[\*\?]$&apos;) THEN &quot;Año con símbolo (YYYY? or YYYY*)&quot;&#13;&#10;ELSEIF REGEXP_MATCH([publishedDate], &apos;^\d{3}\?$&apos;) THEN &quot;Año aproximado (YYY?)&quot;&#13;&#10;ELSEIF REGEXP_MATCH([publishedDate], &apos;^\d{2}\?\?$&apos;) THEN &quot;Década aproximada (YY??)&quot;&#13;&#10;ELSE &quot;Otro / formato erróneo&quot;&#13;&#10;END' />
+            </column>
+            <column-instance column='[Calculation_394909404404633607]' derivation='Count' name='[cnt:Calculation_394909404404633607:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_394909404404633607]' derivation='None' name='[none:Calculation_394909404404633607:nk]' pivot='key' type='nominal' />
+            <column caption='Published Date' datatype='string' name='[publishedDate]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.0konhy60a2kkd416lcf540q1fdxu].[none:Calculation_394909404404633607:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0konhy60a2kkd416lcf540q1fdxu].[cnt:Calculation_394909404404633607:qk]' shelf='rows' />
+          </shelf-sorts>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.0konhy60a2kkd416lcf540q1fdxu].[none:Calculation_394909404404633607:nk]' value='288' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0konhy60a2kkd416lcf540q1fdxu].[cnt:Calculation_394909404404633607:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0konhy60a2kkd416lcf540q1fdxu].[none:Calculation_394909404404633607:nk]</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{7BEDE000-A9C9-4892-9FD3-77D121849486}' />
+    </worksheet>
+    <worksheet name='Frecuencia por título (Top 5)'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='eda_books' name='federated.0konhy60a2kkd416lcf540q1fdxu' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0konhy60a2kkd416lcf540q1fdxu'>
+            <column-instance column='[title]' derivation='Count' name='[cnt:title:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[title]' derivation='None' name='[none:title:nk]' pivot='key' type='nominal' />
+            <column caption='Title' datatype='string' name='[title]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0konhy60a2kkd416lcf540q1fdxu].[none:title:nk]'>
+            <groupfilter count='5' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='COUNT([title])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:title:nk]' user:ui-manual-selection='true' user:ui-manual-selection-all-when-empty='true' user:ui-manual-selection-is-empty='true' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.0konhy60a2kkd416lcf540q1fdxu].[none:title:nk]' direction='ASC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0konhy60a2kkd416lcf540q1fdxu].[cnt:title:qk]' shelf='rows' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.0konhy60a2kkd416lcf540q1fdxu].[none:title:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.0konhy60a2kkd416lcf540q1fdxu].[none:title:nk]' value='680' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.0konhy60a2kkd416lcf540q1fdxu].[none:title:nk]</rows>
+        <cols>[federated.0konhy60a2kkd416lcf540q1fdxu].[cnt:title:qk]</cols>
+      </table>
+      <simple-id uuid='{46D3B1C7-1D9A-4784-A49B-5B122037AECA}' />
+    </worksheet>
+    <worksheet name='Nulos en &quot;books&quot;'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='eda_books' name='federated.0konhy60a2kkd416lcf540q1fdxu' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0konhy60a2kkd416lcf540q1fdxu'>
+            <column caption='Null Title' datatype='integer' name='[Calculation_394909404317298690]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='ZN(IIF(ISNULL([title]), 1, 0))' />
+            </column>
+            <column caption='Null Published Date' datatype='integer' name='[Null Authors (copy)_394909404319170565]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='ZN(IIF(ISNULL([publishedDate]), 1, 0))' />
+            </column>
+            <column caption='Null Authors' datatype='integer' name='[Null Categories (copy)_394909404318572548]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='ZN(IIF(ISNULL([authors]), 1, 0))' />
+            </column>
+            <column caption='Null Categories' datatype='integer' name='[Nulos Title (copy)_394909404317802499]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='ZN(IIF(ISNULL([categories]), 1, 0))' />
+            </column>
+            <column-instance column='[__tableau_internal_object_id__].[eda_books.csv_B46222B121BF469FABC9626C59AFBFFD]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:eda_books.csv_B46222B121BF469FABC9626C59AFBFFD:qk]' pivot='key' type='quantitative' />
+            <column caption='eda_books.csv' datatype='table' name='[__tableau_internal_object_id__].[eda_books.csv_B46222B121BF469FABC9626C59AFBFFD]' role='measure' type='quantitative' />
+            <column caption='Authors' datatype='string' name='[authors]' role='dimension' type='nominal' />
+            <column caption='Categories' datatype='string' name='[categories]' role='dimension' type='nominal' />
+            <column caption='Published Date' datatype='string' name='[publishedDate]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_394909404317298690]' derivation='Sum' name='[sum:Calculation_394909404317298690:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Null Authors (copy)_394909404319170565]' derivation='Sum' name='[sum:Null Authors (copy)_394909404319170565:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Null Categories (copy)_394909404318572548]' derivation='Sum' name='[sum:Null Categories (copy)_394909404318572548:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Nulos Title (copy)_394909404317802499]' derivation='Sum' name='[sum:Nulos Title (copy)_394909404317802499:qk]' pivot='key' type='quantitative' />
+            <column caption='Title' datatype='string' name='[title]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0konhy60a2kkd416lcf540q1fdxu].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0konhy60a2kkd416lcf540q1fdxu].[sum:Nulos Title (copy)_394909404317802499:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0konhy60a2kkd416lcf540q1fdxu].[sum:Calculation_394909404317298690:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0konhy60a2kkd416lcf540q1fdxu].[sum:Null Categories (copy)_394909404318572548:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0konhy60a2kkd416lcf540q1fdxu].[sum:Null Authors (copy)_394909404319170565:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.0konhy60a2kkd416lcf540q1fdxu].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[federated.0konhy60a2kkd416lcf540q1fdxu].[sum:Nulos Title (copy)_394909404317802499:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0konhy60a2kkd416lcf540q1fdxu].[sum:Calculation_394909404317298690:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0konhy60a2kkd416lcf540q1fdxu].[sum:Null Categories (copy)_394909404318572548:qk]&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <filter class='quantitative' column='[federated.0konhy60a2kkd416lcf540q1fdxu].[__tableau_internal_object_id__].[cnt:eda_books.csv_B46222B121BF469FABC9626C59AFBFFD:qk]' included-values='in-range-or-null'>
+            <min>212404</min>
+            <max>212404</max>
+          </filter>
+          <slices>
+            <column>[federated.0konhy60a2kkd416lcf540q1fdxu].[__tableau_internal_object_id__].[cnt:eda_books.csv_B46222B121BF469FABC9626C59AFBFFD:qk]</column>
+            <column>[federated.0konhy60a2kkd416lcf540q1fdxu].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0konhy60a2kkd416lcf540q1fdxu].[Multiple Values]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0konhy60a2kkd416lcf540q1fdxu].[:Measure Names]</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{98E0A1DF-9DC0-46D6-BB8C-0CA025C50449}' />
+    </worksheet>
+    <worksheet name='Top 10 categorías'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='eda_books' name='federated.0konhy60a2kkd416lcf540q1fdxu' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0konhy60a2kkd416lcf540q1fdxu'>
+            <column caption='Categories' datatype='string' name='[categories]' role='dimension' type='nominal' />
+            <column-instance column='[categories]' derivation='Count' name='[cnt:categories:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[categories]' derivation='None' name='[none:categories:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0konhy60a2kkd416lcf540q1fdxu].[none:categories:nk]'>
+            <groupfilter count='10' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='COUNT([categories])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:categories:nk]' user:ui-manual-selection='true' user:ui-manual-selection-all-when-empty='true' user:ui-manual-selection-is-empty='true' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <computed-sort column='[federated.0konhy60a2kkd416lcf540q1fdxu].[none:categories:nk]' direction='DESC' using='[federated.0konhy60a2kkd416lcf540q1fdxu].[cnt:categories:qk]' />
+          <slices>
+            <column>[federated.0konhy60a2kkd416lcf540q1fdxu].[none:categories:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.0konhy60a2kkd416lcf540q1fdxu].[cnt:categories:qk]' value='p0.00%' />
+          </style-rule>
+          <style-rule element='legend'>
+            <format attr='col-width' field='[federated.0konhy60a2kkd416lcf540q1fdxu].[none:categories:nk]' value='170' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <encodings>
+              <color column='[federated.0konhy60a2kkd416lcf540q1fdxu].[none:categories:nk]' />
+              <wedge-size column='[federated.0konhy60a2kkd416lcf540q1fdxu].[cnt:categories:qk]' />
+              <size column='[federated.0konhy60a2kkd416lcf540q1fdxu].[cnt:categories:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{13AAD435-2C16-4B7C-A528-16FDBD0788FA}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <style />
+      <size sizing-mode='automatic' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='89628' id='13' param='horz' type-v2='layout-flow' w='99034' x='483' y='999'>
+            <zone h='89628' id='11' type-v2='layout-basic' w='99034' x='483' y='999'>
+              <zone h='32324' id='3' name='Nulos en &quot;books&quot;' w='15809' x='483' y='999'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='32324' id='9' name='Frecuencia por título (Top 5)' w='60477' x='39040' y='999'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='57304' id='10' name='Top 10 categorías' w='24750' x='483' y='33323'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='57304' id='15' name='Conteo Top categorías' show-title='false' w='24758' x='25233' y='33323'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='57304' id='17' name='Bottom 10 categorías' w='24762' x='49991' y='33323'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='57304' id='19' name='Conteo Bottom categorías' show-title='false' w='24764' x='74753' y='33323'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='32324' id='21' name='Formato de published date' w='22748' x='16292' y='999'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone h='8374' id='16' param='horz' type-v2='layout-flow' w='49480' x='483' y='90627'>
+            <zone h='8374' id='14' name='Top 10 categorías' pane-specification-id='0' param='[federated.0konhy60a2kkd416lcf540q1fdxu].[none:categories:nk]' show-title='false' type-v2='color' w='49480' x='483' y='90627'>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+          </zone>
+          <zone h='8374' id='20' name='Bottom 10 categorías' pane-specification-id='0' param='[federated.0konhy60a2kkd416lcf540q1fdxu].[none:categories:nk]' show-title='false' type-v2='color' w='49554' x='49963' y='90627'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='2100' minheight='2100' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='23' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98002' id='22' param='vert' type-v2='layout-flow' w='99034' x='483' y='999'>
+                <zone fixed-size='251' h='32324' id='3' is-fixed='true' name='Nulos en &quot;books&quot;' w='15809' x='483' y='999'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='251' h='32324' id='21' is-fixed='true' name='Formato de published date' w='22748' x='16292' y='999'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='251' h='32324' id='9' is-fixed='true' name='Frecuencia por título (Top 5)' w='60477' x='39040' y='999'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='57304' id='10' is-fixed='true' name='Top 10 categorías' w='24750' x='483' y='33323'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='8374' id='14' name='Top 10 categorías' pane-specification-id='0' param='[federated.0konhy60a2kkd416lcf540q1fdxu].[none:categories:nk]' show-title='false' type-v2='color' w='49480' x='483' y='90627'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='57304' id='15' is-fixed='true' name='Conteo Top categorías' show-title='false' w='24758' x='25233' y='33323'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='57304' id='17' is-fixed='true' name='Bottom 10 categorías' w='24762' x='49991' y='33323'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='8374' id='20' name='Bottom 10 categorías' pane-specification-id='0' param='[federated.0konhy60a2kkd416lcf540q1fdxu].[none:categories:nk]' show-title='false' type-v2='color' w='49554' x='49963' y='90627'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='57304' id='19' is-fixed='true' name='Conteo Bottom categorías' show-title='false' w='24764' x='74753' y='33323'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{9B865DEA-E1E5-4ADF-AA54-F005A2FABFEA}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='37'>
+    <window class='worksheet' name='Nulos en &quot;books&quot;'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{0A86D666-80F4-46F5-8D5E-3F69A834495A}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Frecuencia por título (Top 5)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{F27A8C4C-71D7-414C-A9B6-39EEB200DA31}' />
+    </window>
+    <window class='worksheet' name='Top 10 categorías'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='281'>
+            <card pane-specification-id='0' param='[federated.0konhy60a2kkd416lcf540q1fdxu].[none:categories:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{23DF9056-120C-48C9-A637-FF464178DB79}' />
+    </window>
+    <window class='worksheet' name='Bottom 10 categorías'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0konhy60a2kkd416lcf540q1fdxu].[none:categories:nk]' type='color' />
+            <card pane-specification-id='0' param='[federated.0konhy60a2kkd416lcf540q1fdxu].[cnt:categories:qk]' type='size' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{CD657E4D-7A55-4A8D-B879-F511AB4277A2}' />
+    </window>
+    <window class='worksheet' name='Conteo Top categorías'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{DAEAE51B-F685-41A2-BADC-7AB4B4B28B18}' />
+    </window>
+    <window class='worksheet' name='Conteo Bottom categorías'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{BC232705-3FB9-4888-BB7C-447113118B24}' />
+    </window>
+    <window class='worksheet' name='All published date'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{D6C75FF9-626E-438A-9521-58DD7D060208}' />
+    </window>
+    <window class='worksheet' name='Formato de published date'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{4ADC7213-EA00-47AD-8EF5-DBAD70AB69F1}' />
+    </window>
+    <window class='dashboard' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Bottom 10 categorías'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Conteo Bottom categorías'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Conteo Top categorías'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Formato de published date'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Frecuencia por título (Top 5)' />
+        <viewpoint name='Nulos en &quot;books&quot;' />
+        <viewpoint name='Top 10 categorías'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='21' />
+      <simple-id uuid='{7C7B43D3-8486-4FAB-89D1-E2FE27647956}' />
+    </window>
+  </windows>
+</workbook>
