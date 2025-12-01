@@ -1,6 +1,6 @@
 Este proyecto aborda un desafío de Big Data, analizar 3 millones de [reseñas de libros de Amazon obtenidos de Kaggle](https://www.kaggle.com/datasets/mohamedbakhet/amazon-books-reviews/data), un conjunto de datos de más de `2.6 GB`. 
 
-El objetivo principal es **construir y evaluar un modelo de Machine Learning¨¨ capaz de **clasificar automáticamente el sentimiento** de una reseña como `"Positivo" (1.0)` o `"Negativo" (0.0).`
+El objetivo principal es **construir y evaluar un modelo de Machine Learning** capaz de **clasificar automáticamente el sentimiento** de una reseña como `"Positivo" (1.0)` o `"Negativo" (0.0).`
 
 Para manejar este volumen de datos, el proceso se realiza con **Apache Spark (PySpark)**. El cuaderno "PortafolioAnalisisBigData.ipynb" documenta el flujo de trabajo completo:
 
